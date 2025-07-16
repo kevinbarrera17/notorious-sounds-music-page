@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --first-color: #010214;
+      --first-alpha-color: #040622e2;
+      --second-color: #0bd270;
+      --second-alpha-color: #2bd480d6;
+      --third-color: #16b88f;
+      --third-alpha-color: #31b393ce;
+      --gradient-color: linear-gradient(56deg, rgba(1, 225, 84, 1) 25%, rgba(30, 214, 182, 1) 82%)
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .flex-display {
+      display: flex;
+    }
+
+    .card.card-find-the-audio-1 {
+      border-radius: 12px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      background-image: url(images-music/01\ -\ trans-OR7WCI0.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card.card-find-the-audio-2 {
+      border-radius: 12px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      background-image: url(images-music/02\ -\ trans—Slidesdocs—líneas\ láser\ abstractas\ iluminan\ la_5e43bfdab6.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card.card-find-the-audio-3 {
+      border-radius: 12px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      background-image: url(images-music/03\ -\ trans-fondo-abstracto-cielo-nocturno-e\ .jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card.card-find-the-audio-4 {
+      border-radius: 12px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      background-image: url(images-music/04\ -\ trans-georgia-de-lotz-JsQ6K5CfJ7s-unsplash.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card.card-find-the-audio-5 {
+      border-radius: 12px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      background-image: url(images-music/05\ -\ trans.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card.card-find-the-audio-6 {
+      border-radius: 12px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      background-image: url(images-music/06\ -\ trans-light-blue-and-pink-neon-texture-1242068583110938734.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card.card-find-the-audio-7 {
+      border-radius: 12px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      background-image: url(images-music/07\ -\ trans-colorido-fondo-neon-patron-azul\ \(1\).jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card.card-find-the-audio-8 {
+      border-radius: 12px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      background-image: url(images-music/08\ -\ trans-danny-lines-TTRNdWfY8TY-unsplash.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card {
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      display: flex;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .card-1 {
+      height: 30%;
+    }
+
+    .card-2 {
+      height: 40%;
+    }
+
+    .card-3 {
+      height: 40%;
+    }
+
+    .card-4 {
+      height: 30%;
+    }
+
+    .container1 {
+      margin-left: 15px;
+      width: 275px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      gap: 1%;
+    }
+
+    .container2 {
+      margin-left: 15px;
+      width: 275px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      gap: 1%;
+    }
+
+    .content-music {
+      margin-bottom: 0 !important;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      padding: 5px;
+      aspect-ratio: 1/1;
+      width: 250px;
+      height: auto;
+    }
+
+    .content-music-samples {
+      padding: 0 14px;
+    }
+
+
+    .element-music {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      overflow: hidden;
+    }
+
+    .element-music h5 {
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .element-music-buy-now a {
+      font-family: "Rubik", sans-serif;
+      font-weight: 300;
+      margin-left: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .element-music-buy-now a:hover {
+      color: var(--second-color);
+      transition: all .3s ease-out;
+    }
+
+    .title-music-samples {
+      font-weight: 800;
+      color: #000;
+      margin-left: 50px;
+    }
+
+    .title-music-1 {
+      font-weight: 700;
+      color: #fff;
+      margin-right: 43px;
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+
+    .title-music-3 {
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: -6px;
+      margin-right: 43px;
+      margin-left: 10px;
+    }
+
+    .title-music-1-samples {
+      font-weight: 700;
+      color: #fff;
+      margin-right: 36px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    .title-music-4 {
+      font-weight: 700;
+      color: #fff;
+      margin-left: 10px;
+      margin-top: 33px;
+      margin-right: 76px;
+    }
+
+    .title-music-4-samples {
+      font-weight: 700;
+      color: #fff;
+      margin-left: 10px;
+      margin-top: 33px;
+      margin-right: 40px;
+    }
+
+    .title-music-2 {
+      font-weight: 700;
+      color: #fff;
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+
+    .bg-blue {
+      background-color: rgba(1, 225, 83, 0.508);
+      color: #fff;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .fa-pause.pause-btn.hide {
+      display: none;
+    }
+
+    .player__audio {
+      display: none;
+      visibility: hidden;
+    }
+
+    .player__btn {
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .player__btn:hover {
+      box-shadow: inset -8px -8px 20px #ffffff30, inset -5px -5px 6px #ffffff30,
+        inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+    }
+
+    .player__btn:active {
+      box-shadow: inset -8px -8px 20px #ffffff65, inset -5px -5px 6px #ffffff67,
+        inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+    }
+
+    .player__btn--medium {
+      margin-bottom: 14px;
+      margin-left: 7px;
+      min-height: 36px;
+      min-width: 36px;
+      font-size: 15px;
+    }
+
+    .player__controls {
+      display: flex;
+      width: 95%;
+    }
+
+    .price-music {
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: bold;
+      color: #fff;
+      padding-right: 4px;
+      margin-bottom: 12px;
+    }
+
+    .price-music:hover {
+      color: var(--second-alpha-color);
+      transition: all .3s ease-out;
+      cursor: pointer;
+    }
+
+    .width-music {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex mt-5">
+    <div class="container1">
+      <div class="card card-1 card-find-the-audio-1">
+        <div class="width-music">
+          <div class="content-music">
+            <div class="element-music">
+              <h5 class="title-music-1">AL Fiandi - Feel My Love</h5>
+              <span class="price-music ms-lg-auto">
+                25$
+              </span>
+            </div>
+            <div class="element-music-buy-now">
+              <a href="..." target="_blank" class="fs-6 decoration-buy">Buy now <i style="color: #0bd270;"
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="element-music">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-2 card-find-the-audio-2">
+        <div class="width-music">
+          <div class="content-music">
+            <div class="element-music">
+              <h5 class="title-music-2">Cheno Minimix Dance Vol. 01</h5>
+              <span class="price-music ms-lg-auto">
+                25$
+              </span>
+            </div>
+            <div class="element-music-buy-now">
+              <a href="..." target="_blank" class="fs-6 decoration-buy">Buy now <i style="color: #0bd270 !important;"
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="element-music">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="card card-3 card-find-the-audio-3">
+        <div class="width-music">
+          <div class="content-music">
+            <div class="element-music">
+              <h5 class="title-music-3">Avalon Minimix Vol.1</h5>
+              <span class="price-music ms-lg-auto">
+                30$
+              </span>
+            </div>
+            <div class="element-music-buy-now">
+              <a href="..." target="_blank" class="fs-6 decoration-buy">Buy now <i style="color: #0bd270 !important;"
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="element-music">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-4 card-find-the-audio-4">
+        <div class="width-music">
+          <div class="content-music">
+            <div class="element-music">
+              <h5 class="title-music-1">AL Fiandi - Feel My Love</h5>
+              <span class="price-music ms-lg-auto">
+                25$
+              </span>
+            </div>
+            <div class="element-music-buy-now">
+              <a href="..." target="_blank" class="fs-6 decoration-buy">Buy now <i style="color: #0bd270 !important;"
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="element-music">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container1">
+      <div class="card card-1 card-find-the-audio-5">
+        <div class="width-music">
+          <div class="content-music">
+            <div class="element-music">
+              <h5 class="title-music-3">Avalon Minimix Vol.1</h5>
+              <span class="price-music ms-lg-auto">
+                10$
+              </span>
+            </div>
+            <div class="element-music-buy-now">
+              <a href="..." target="_blank" class="fs-6 decoration-buy">Buy now <i style="color: #0bd270 !important;"
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="element-music">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-2 card-find-the-audio-6">
+        <div class="width-music">
+          <div class="content-music">
+            <div class="element-music">
+              <h5 class="title-music-1">AL Fiandi - Feel My Love</h5>
+              <span class="price-music ms-lg-auto">
+                70$
+              </span>
+            </div>
+            <div class="element-music-buy-now">
+              <a href="..." target="_blank" class="fs-6 decoration-buy">Buy now <i style="color: #0bd270 !important;"
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="element-music">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="card card-3 card-find-the-audio-7">
+        <div class="width-music">
+          <div class="content-music">
+            <div class="element-music">
+              <h5 class="title-music-2">Cheno Minimix Dance Vol. 01</h5>
+              <span class="price-music ms-lg-auto">
+                50$
+              </span>
+            </div>
+            <div class="element-music-buy-now">
+              <a href="..." target="_blank" class="fs-6 decoration-buy">Buy now <i style="color: #0bd270 !important;"
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="element-music">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-4 card-find-the-audio-8">
+        <div class="width-music">
+          <div class="content-music">
+            <div class="element-music">
+              <h5 class="title-music-4" style="margin-bottom: 29px">Avalon - Life</h5>
+              <span class="price-music ms-lg-auto">
+                35$
+              </span>
+            </div>
+            <div class="element-music-buy-now">
+              <a href="..." target="_blank" class="fs-6 decoration-buy">Buy now <i style="color: #0bd270 !important;"
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="element-music">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

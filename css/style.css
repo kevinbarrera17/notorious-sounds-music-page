@@ -1,0 +1,1132 @@
+/* ************* Custom Properties ************* */
+:root {
+  --first-color: #010214;
+  --first-alpha-color: #040622e2;
+  --second-color: #0bd270;
+  --second-alpha-color: #2bd480d6;
+  --third-color: #16b88f;
+  --third-alpha-color: #31b393ce;
+  --gradient-color: linear-gradient(56deg, rgba(1, 225, 84, 1) 25%, rgba(30, 214, 182, 1) 82%);
+  --gradient-alpha-color: linear-gradient(56deg, rgba(1, 223, 83, 0.77) 25%, rgba(30, 214, 182, 0.77) 82%);
+}
+
+/* ************* Reset Styles ************* */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+}
+
+/* ************* Bootstrap Styles ************* */
+.bg-dark {
+  background-color: var(--first-color) !important;
+}
+
+.bg-dark-footer {
+  background-color: #000 !important;
+}
+
+.bg-footer {
+  background-color: #000;
+}
+
+.container-fluid.p-2 hr {
+  margin-top: 0;
+  margin-left: 16px;
+  margin-right: 16px;
+  color: #fff;
+}
+
+.navbar-brand.navbar-header-logo {
+  margin-left: 11px;
+  margin-top: 12px;
+  font-family: "Nunito Sans", sans-serif;
+  gap: 8px;
+}
+
+.navbar-brand.navbar-footer-logo {
+  margin-top: 12px;
+  font-family: "Nunito Sans", sans-serif;
+  gap: 8px;
+}
+
+.navbar-brand img {
+  width: auto;
+  height: 25px;
+}
+
+.navbar-dark .navbar-toggler {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  transition: all .3s ease-out;
+}
+
+.navbar-dark .navbar-toggler:hover {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2811, 210, 112, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  opacity: .75;
+}
+
+.nav-item {
+  transition: all .3s ease-out;
+}
+
+.nav-item.item-find-the-audio {
+  transition: all .3s ease-out;
+}
+
+.nav-link.link-start {
+  margin-left: .5rem;
+  color: #fff;
+  font-size: 1.07rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.nav-link.link-start:hover {
+  color: var(--second-color);
+}
+
+.nav-link.link-end {
+  margin-left: .5rem;
+  color: #fff;
+  font-size: 1.07rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.nav-link.link-end:hover {
+  color: var(--second-color);
+}
+
+.nav-link.link-find-the-audio {
+  margin-left: .5rem;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.07rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.nav-link.link-find-the-audio:hover {
+  color: #3b67bf;
+}
+
+.nav-link.link-find-the-audio:focus {
+  color: #3b67bf;
+}
+
+.spacing-navbar {
+  gap: 0px 11px;
+}
+
+
+/* ************* My Styles ************* */
+.color-gradient-title {
+  background-image: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.content-notorious-sounds {
+  padding: 20px;
+  color: #fff;
+}
+
+.copy {
+  font-family: "Rubik", sans-serif;
+}
+
+.form-control::placeholder {
+  font-size: 13px;
+  color: #eeeeee23;
+}
+
+.form-control:focus {
+  box-shadow: var(--second-alpha-color);
+}
+
+.input-nav a {
+  margin-top: 9px;
+  margin-right: 12px;
+}
+
+.input-nav button {
+  border: 1px solid var(--second-color);
+  color: var(--second-color);
+  background-color: transparent;
+  width: 40px;
+  height: 37px;
+  margin-top: 3px;
+}
+
+.input-nav button:hover {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+.input-nav input {
+  margin-top: 3px;
+  width: 147px;
+  height: 36px;
+  background-color: transparent !important;
+  border: 1px solid #2bd47fa9 !important;
+  color: #ffffffca !important;
+}
+
+.image-container {
+  background-image: url('../assets/banner-de-la-pagina.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.line-bottom ul {
+  border-bottom: 3px solid #00000032;
+}
+
+.links-footer a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+}
+
+.links-footer a:hover {
+  transition: all .3s ease-out;
+  color: var(--second-color);
+}
+
+.sign-in {
+  font-family: "Rubik", sans-serif;
+  color: var(--second-color);
+  transition: all .3s ease-out;
+  text-decoration: none;
+}
+
+.sign-in:hover {
+  color: #fff;
+  transition: all .3s ease-out;
+}
+
+.terms-of-service {
+  margin-right: 8px;
+}
+
+.title-find-the-audio {
+  margin-top: 110px;
+  color: #000;
+  font-weight: 700;
+}
+
+/* ************* Square Title 1 ************* */
+.square-div {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.square-div::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 92%;
+  height: 20%;
+  background-color: #3d116c;
+  z-index: 1;
+  margin-bottom: 6px;
+}
+
+.square-div h2 {
+  font-size: 30px;
+  margin-bottom: -10px;
+}
+
+.square-div small {
+  font-size: 0.8em;
+  margin-top: 8px;
+  font-family: "Rubik", sans-serif;
+}
+
+.square-div h2,
+.square-div small {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: white;
+}
+
+.margins-top {
+  margin-top: -20px;
+}
+
+/* ************* Square Title 2 ************* */
+.square-div-2 {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 250px;
+}
+
+.square-div-2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 84%;
+  height: 20%;
+  background-color: #03491d;
+  z-index: 1;
+  margin-bottom: 8px;
+}
+
+.square-div-2 h2 {
+  font-size: 30px;
+  margin-bottom: -100px;
+}
+
+.square-div-2 small {
+  font-size: 0.8em;
+  margin-top: 8px;
+  font-family: "Rubik", sans-serif;
+}
+
+.square-div-2 h2,
+.square-div-2 small {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: white;
+}
+
+/* ************* Square Title 3 ************* */
+.square-div-3 {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 300px;
+}
+
+.square-div-3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 77%;
+  height: 20%;
+  background-color: #104051;
+  z-index: 1;
+  margin-bottom: 8px;
+}
+
+.square-div-3 h2 {
+  font-size: 30px;
+  margin-bottom: -10px;
+}
+
+.square-div-3 small {
+  font-size: 0.8em;
+  margin-top: 8px;
+  font-family: "Rubik", sans-serif;
+}
+
+.square-div-3 h2,
+.square-div-3 small {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: white;
+}
+
+/* ************* Sección Find The Audio ************* */
+.bg-blue {
+  background-color: rgba(1, 225, 83, 0.508);
+  color: #fff;
+}
+
+.btn-lead-more {
+  padding: 18px 45px;
+  border: 3px solid #0bd270;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+
+.btn-lead-more:hover {
+  padding: 21px 48px;
+  border: 0;
+  background-image: var(--gradient-color);
+  color: #ffffff;
+}
+
+.card.card-find-the-audio-1 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/01\ -\ trans-OR7WCI0.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-find-the-audio-2 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/02\ -\ trans—Slidesdocs—líneas\ láser\ abstractas\ iluminan\ la_5e43bfdab6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-find-the-audio-3 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/03\ -\ trans-fondo-abstracto-cielo-nocturno-e\ .jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-find-the-audio-4 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/04\ -\ trans-georgia-de-lotz-JsQ6K5CfJ7s-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-find-the-audio-5 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/05\ -\ trans.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-find-the-audio-6 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/06\ -\ trans-light-blue-and-pink-neon-texture-1242068583110938734.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-find-the-audio-7 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/07\ -\ trans-colorido-fondo-neon-patron-azul\ \(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-find-the-audio-8 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/08\ -\ trans-danny-lines-TTRNdWfY8TY-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.progress {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-alpha-color);
+}
+
+.progressRed {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: red;
+}
+
+.progress-bar-big {
+  margin-top: 14px;
+  position: relative;
+  height: 6px;
+  width: 166px;
+  border: solid 1px #2bd47f4d;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.progress-bar-small {
+  margin-top: 13px;
+  position: relative;
+  height: 6px;
+  width: 166px;
+  border: solid 1px #2bd47f4d;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.progress-bar-big:hover {
+  height: 9px;
+}
+
+.progress-bar-small:hover {
+  height: 9px;
+}
+
+.content-find-the-audio {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+.content-music {
+  margin-bottom: 0 !important;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 5px;
+  aspect-ratio: 1/1;
+  width: 250px;
+  height: auto;
+}
+
+.content-music-small {
+  margin-bottom: 0 !important;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 5px;
+  aspect-ratio: 1/1;
+  width: 250px;
+  height: auto;
+}
+
+.col-sm-12.col-md-6.col-lg-3.columns-find {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element-music {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.element-music h5 {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.element-music-buy-now a {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.element-music-buy-now a:hover {
+  color: var(--second-color);
+  transition: all .3s ease-out;
+}
+
+.hide {
+  display: none;
+}
+
+.fa-pause.pause-btn.hide {
+  display: none;
+}
+
+.player__controls {
+  display: flex;
+  width: 95%;
+}
+
+.player__controls__2 {
+  margin-top: 44px;
+  display: flex;
+  width: 95%;
+}
+
+.player__controls__3 {
+  margin-top: 63px;
+  display: flex;
+  width: 95%;
+}
+
+.player__btn {
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player__btn:hover {
+  box-shadow: inset -8px -8px 20px #ffffff30, inset -5px -5px 6px #ffffff30,
+    inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+}
+
+.player__btn:active {
+  box-shadow: inset -8px -8px 20px #ffffff65, inset -5px -5px 6px #ffffff67,
+    inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+}
+
+.player__audio {
+  display: none;
+  visibility: hidden;
+}
+
+.player__btn--medium {
+  margin-bottom: -36px;
+  margin-left: 7px;
+  min-height: 36px;
+  min-width: 36px;
+  font-size: 15px;
+}
+
+.player__btn--medium-slider {
+  margin-left: 7px;
+  min-height: 36px;
+  min-width: 36px;
+  font-size: 15px;
+}
+
+.player__btn--medium--small {
+  margin-bottom: 41px;
+  margin-right: 11px;
+  margin-left: 7px;
+  min-height: 34px;
+  min-width: 34px;
+  font-size: 14px;
+}
+
+.player__btn--medium--big {
+  margin-right: 11px;
+  margin-left: 7px;
+  min-height: 36px;
+  min-width: 36px;
+  font-size: 15px;
+}
+
+.flecha-abajo {
+  color: var(--second-color);
+}
+
+.flecha-abajo:hover {
+  color: #fff;
+}
+
+.image-container-find-the-audio {
+  background-image: url(../assets/157345172-textura-monocromática-transformed-transparent.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 75px;
+}
+
+.price-music {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding-right: 4px;
+  margin-bottom: 9px;
+}
+
+.price-music:hover {
+  color: var(--second-color);
+  transition: all .3s ease-out;
+  cursor: pointer;
+}
+
+.title-music-1 {
+  font-weight: 700;
+  color: #fff;
+  margin-right: 43px;
+  margin-left: 10px;
+  margin-top: 24px;
+}
+
+.title-music-3 {
+  font-weight: 700;
+  color: #fff;
+  margin-top: 24px;
+  margin-right: 43px;
+  margin-left: 10px;
+}
+
+.title-music-1-samples {
+  font-weight: 700;
+  color: #fff;
+  margin-right: 36px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.title-music-4 {
+  font-weight: 700;
+  color: #fff;
+  margin-left: 10px;
+  margin-top: 50px;
+  margin-right: 76px;
+}
+
+.title-music-4-samples {
+  font-weight: 700;
+  color: #fff;
+  margin-left: 10px;
+  margin-top: 33px;
+  margin-right: 40px;
+}
+
+.title-music-2 {
+  font-weight: 700;
+  color: #fff;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.width-music {
+  height: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.width-music-2 {
+  height: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ************* Sección Explore Different Genres ************* */
+.btn-explore-dif-genres {
+  padding: 18px 40px;
+  border: 3px solid #0bd270;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn-explore-dif-genres:hover {
+  padding: 21px 43px;
+  border: 0;
+  background-image: var(--gradient-color);
+  color: #000000;
+}
+
+.img-explore-dif-genres {
+  background-image: url(../assets/textura-dj-negro-monocromática-transformed-transparent\ \(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.p-explore {
+  color: #ffffff72;
+  font-weight: 300;
+}
+
+/* ************* Sección Music Samples On Sale ************* */
+.btn-show-all-sales {
+  padding: 15px 34px;
+  border: 3px solid #0bd270;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+
+.btn-show-all-sales:hover {
+  padding: 18px 37px;
+  border: 0;
+  background-image: var(--gradient-color);
+  color: #fff;
+}
+
+.bold-music-samples {
+  margin-left: 25px;
+  font-weight: 800;
+}
+
+.card.card-music-samples-1 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/01\ -\ trans-OR7WCI0.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-music-samples-2 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/02\ -\ trans—Slidesdocs—líneas\ láser\ abstractas\ iluminan\ la_5e43bfdab6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-music-samples-3 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/03\ -\ trans-fondo-abstracto-cielo-nocturno-e\ .jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-music-samples-4 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/04\ -\ trans-georgia-de-lotz-JsQ6K5CfJ7s-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-music-samples-5 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/05\ -\ trans.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-music-samples-6 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/06\ -\ trans-light-blue-and-pink-neon-texture-1242068583110938734.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-music-samples-7 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/07\ -\ trans-colorido-fondo-neon-patron-azul\ \(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.card-music-samples-8 {
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-image: url(../images-music/08\ -\ trans-danny-lines-TTRNdWfY8TY-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-1 {
+  height: 40%;
+}
+
+.card-2 {
+  height: 50%;
+}
+
+.card-3 {
+  height: 50%;
+}
+
+.card-4 {
+  height: 40%;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-inner {
+  padding: 1em;
+}
+
+.content-music-samples {
+  padding: 0 14px;
+}
+
+.gap-y-music-samples {
+  gap: 32px 0;
+  margin-top: 63px;
+}
+
+.title-music-samples {
+  font-weight: 800;
+  color: #000;
+  margin-left: 50px;
+}
+
+/* ************* Sección Make Your Music ************* */
+.btn-make-your-music {
+  padding: 17px 37px;
+  border: 3px solid #0bd270;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn-make-your-music:hover {
+  padding: 20px 40px;
+  border: 0;
+  background-image: var(--gradient-color);
+  color: #000000;
+}
+
+.img-make-your-music {
+  background-image: url(../assets/la-otra-textura-dj2-negro.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title-make {
+  font-size: 47px;
+}
+
+.mt-link-make {
+  margin-top: 72px;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .d-none-explore-mobile {
+    display: none;
+  }
+
+  .title-music-4 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .carousel-inner {
+    display: flex;
+  }
+
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100%/4);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .button-prev-music-samples {
+    margin-left: 32px;
+  }
+
+  .button-next-music-samples {
+    margin-right: 32px;
+  }
+
+  .line-bottom ul {
+    border-bottom: 0;
+  }
+
+  .title-music-4 {
+    margin-right: 84px;
+  }
+
+  .row .content .square-div {
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: 768px) {}
+
+.title-music-samples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.link-music-samples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 320px) and (max-width: 992px) {
+  .title-music-4-samples {
+    margin-right: 81px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .input-nav a {
+    line-height: 28px;
+    margin-left: 8px;
+    margin-bottom: 20px;
+  }
+
+  .input-nav button {
+    width: 38px;
+    height: 38px;
+    margin-top: 2px;
+  }
+
+  .input-nav input {
+    margin-left: 8px;
+  }
+
+  .sign-in {
+    font-size: 18px;
+  }
+
+  .square-div-2 {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+  }
+
+  .square-div-3 {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 190px;
+  }
+
+  .title-music-1,
+  .title-music-2,
+  .title-music-3 {
+    font-size: 1.25rem;
+  }
+}
+
+
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  .image-container-find-the-audio {
+    height: 100%;
+  }
+
+  .price-music {
+    font-size: 86%;
+  }
+
+  .title-music-1,
+  .title-music-3 {
+    font-size: 60%;
+  }
+
+  .title-music-1-samples {
+    font-size: 60%;
+  }
+
+  .title-music-4 {
+    font-size: 66%;
+  }
+
+  .title-music-4-samples {
+    font-size: 66%;
+  }
+
+  .title-music-2 {
+    font-size: 60%;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .input-nav input {
+    margin-top: 3px;
+    width: 190px;
+    height: 36px;
+  }
+}
+
+
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .image-container-find-the-audio {
+    height: 100%;
+  }
+
+  .img-explore-dif-genres {
+    height: 100%;
+  }
+
+  .img-make-your-music {
+    height: 100%;
+  }
+}

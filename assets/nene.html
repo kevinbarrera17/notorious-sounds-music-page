@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor de Audio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .audio-player {
+      display: flex;
+      align-items: center;
+      width: 300px;
+    }
+
+    #play-pause {
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .progress-container {
+      flex-grow: 1;
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      background-color: #4caf50;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="audio-player">
+    <button id="play-pause" class="play">▶️</button>
+    <div class="progress-container" id="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <audio id="audio">
+      <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Leo%20-%20Trying.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('play-pause');
+    const progressContainer = document.getElementById('progress-container');
+    const progressBar = document.getElementById('progress-bar');
+
+    // Cambiar entre play y pause
+    playPauseBtn.addEventListener('click', togglePlayPause);
+
+    // Actualiza la barra de progreso mientras se reproduce el audio
+    audio.addEventListener('timeupdate', updateProgress);
+
+    // Mueve el audio a la posición clicada en la barra
+    progressContainer.addEventListener('click', setProgress);
+
+    // Función para reproducir o pausar el audio
+    function togglePlayPause() {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = '⏸️';  // Cambia el icono a pausa
+      } else {
+        audio.pause();
+        playPauseBtn.textContent = '▶️';  // Cambia el icono a play
+      }
+    }
+
+    // Función para actualizar la barra de progreso
+    function updateProgress() {
+      const { duration, currentTime } = audio;
+      const progressPercent = (currentTime / duration) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+    }
+
+    // Función para adelantar o retroceder el audio según el clic en la barra
+    function setProgress(e) {
+      const width = progressContainer.clientWidth;
+      const clickX = e.offsetX;
+      const duration = audio.duration;
+      audio.currentTime = (clickX / width) * duration;
+    }
+  </script>
+</body>
+
+</html>

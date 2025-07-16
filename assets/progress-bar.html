@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #barra {
+      position: relative;
+      height: 5px;
+      width: 500px;
+      border: solid 1px #ccc;
+    }
+
+    #progreso {
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: #0F0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="barra">
+    <div id="progreso"></div>
+  </div>
+  <section id="reproductor">
+    <audio id="audio">
+      <source src="assets/Zachz Winner - blu [NCS Release].mp3">
+    </audio>
+    <button id="reproducir" onclick="reproducir()">Reproducir/Pausar</button>
+    <button id="-5sg" onclick="menos5sg()">-5sg</button>
+    <button id="+5sg" onclick="mas5sg()">+5sg</button>
+    <button id="0" onclick="restar()">Restar</button>
+  </section>
+  <script>
+    function reproducir() {
+      var audio = document.getElementById("audio")
+      if (!audio.paused && !audio.ended) {
+        audio.pause()
+        reproducir.innerHTML = "Reproducir"
+      } else {
+        audio.play()
+        reproducir.innerHTML = "Pausa"
+      }
+    }
+
+    function menos5sg() {
+      var audio = document.getElementById("audio")
+      audio.play()
+      audio.currentTime = audio.currentTime - 5
+    }
+
+    function mas5sg() {
+      var audio = document.getElementById("audio")
+      audio.currentTime = audio.currentTime + 5
+      audio.play()
+    }
+
+    function restar() {
+      var audio = document.getElementById("audio")
+      audio.currentTime = 0
+      audio.play()
+    }
+
+    function iniciar() {
+      document.querySelector('audio').addEventListener('timeupdate', function () {
+        document.getElementById('progreso').style.width = (this.currentTime * 100 / this.duration) + '%';
+      });
+    }
+    window.addEventListener("load", iniciar, false)
+  </script>
+</body>
+
+</html>
