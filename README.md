@@ -15,3 +15,4 @@ Página ficticia para una disquera de música electrónica donde se promocionan 
 ### 🚀 Propósito:
 Simulación de un sitio de e-commerce musical para practicar interactividad con JavaScript y diseño atractivo.
 
+Enlace: https://kevinbarrera17.github.io/notorious-sounds-music-page/
